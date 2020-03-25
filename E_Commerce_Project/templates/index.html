@@ -32,17 +32,17 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
-				<form class="login100-form validate-form" action="index/" method="post">
+				<form class="login100-form validate-form" action="login/" method="post">
 					{% csrf_token %}
-					<div>
-						{% if messages %}
-							{% for i in messages %}
-								{% if i.tags %}
-									<script>alert("{{ i }}")</script>
-								{% endif %}
-							{% endfor %}
-						{% endif %}
-					</div>
+<!--					<div>-->
+<!--						{% if messages %}-->
+<!--							{% for i in messages %}-->
+<!--								{% if i.tags %}-->
+<!--									<script>alert("{{ i }}")</script>-->
+<!--								{% endif %}-->
+<!--							{% endfor %}-->
+<!--						{% endif %}-->
+<!--					</div>-->
 					<span class="login100-form-title p-b-33">
 						Login here
 					</span>
@@ -58,11 +58,11 @@
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
-					<div style="color:#E71C23">
-                            {% if wrong %}
-                                {{wrong}}
-                            {% endif %}
-                        </div>
+<!--					<div style="color:#E71C23">-->
+<!--                            {% if wrong_user %}-->
+<!--                                {{wrong_user}}-->
+<!--                            {% endif %}-->
+<!--                        </div>-->
 					<div class="container-login100-form-btn m-t-20">
 						<button class="login100-form-btn">
 							Sign in

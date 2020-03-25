@@ -14,6 +14,12 @@
 </head>
 <body bgcolor="#74B9FF">
 
+{% for message in messages %}
+<script>
+    alert('{{message}}')
+</script>
+{% endfor %}
+
     <div class="main">
 
         <section class="signup">
@@ -26,24 +32,11 @@
                         <div class="form-group">
                             <input type="text" class="form-input" name="username" id="name" placeholder="Username"/>
                         </div>
-                        <div style="color:#E71C23">
 
-                            {% if user_name_taken %}
-                                {{user_name_taken}}
-                            {% endif %}
-
-                        </div>
                         <div class="form-group">
                             <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
                         </div>
 
-                        <div style="color:#E71C23">
-
-                            {% if email_taken %}
-                                {{email_taken}}
-                            {% endif %}
-
-                        </div>
 
                         <div class="form-group">
                             <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
@@ -52,19 +45,11 @@
                         <div class="form-group">
                             <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
                         </div>
-                        <div style="color:#E71C23">
-                            {% if password_mismatch %}
-                                {{password_mismatch}}
-                            {% endif %}
-                        </div>
+
                         <div class="form-group">
                             <input type="checkbox" name="agree_term" id="agree_term" class="agree-term" />
                             <label for="agree_term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label><br>
-                            <div style="color:#E71C23">
-                            {% if not_agree %}
-                                {{not_agree}}
-                            {% endif %}
-                            </div>
+
                         </div>
 
                         <div class="form-group">
@@ -72,7 +57,7 @@
                         </div>
                     </form>
                     <p class="loginhere">
-                        Have already an account ? <a href="index/" class="loginhere-link">Login here</a>
+                        Have already an account ? <a href="login/" class="loginhere-link">Login here</a>
                     </p>
                 </div>
             </div>
