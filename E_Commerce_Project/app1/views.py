@@ -2,14 +2,16 @@ from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-
+from .models import Products
 
 # Create your views here.
 from django.urls import reverse
 
 
+
 def home(request):
-    return render(request, "home.html")
+    products = Products.objects.all()
+    return render(request, "home.html", {'products': products})
 
 
 def login(request):
